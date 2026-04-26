@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voting Rules</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #0f0f0f;
+      color: #ffffff;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .logo {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .logo img {
+      width: 120px;
+      height: auto;
+    }
+
+    h1, h2, h3 {
+      text-align: center;
+    }
+
+    .card {
+      background: #1c1c1c;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+
+    .section-title {
+      color: #f5c542;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      line-height: 1.8;
+    }
+
+    .pricing {
+      background: #111;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    .pricing p {
+      margin: 5px 0;
+    }
+
+    .contact {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    .highlight {
+      color: #f5c542;
+      font-weight: bold;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 15px;
+      margin: 5px;
+      background: #f5c542;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #e0b93c;
+    }
+
+    .payment-box {
+      background: #111;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .note {
+      font-size: 12px;
+      color: #aaa;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- LOGO -->
+    <div class="logo">
+      <img src="logo.png" alt="IFBB Logo" />
+    </div>
+
+    <h1>IFBB FEDERATION RULES FOR BODYBUILDING AND FITNESS</h1>
+
+    <div class="card">
+      <p>Approved by the IFBB International Congress, November 15th, 2014, Brasília, Brazil.</p>
+      <p>Modified according to 2018–2022 IFBB International Congresses and EBFF/IFBB decisions.</p>
+      <p><strong>2024 EDITION</strong></p>
+    </div>
+
+    <div class="card">
+      <p>In sport, there are no limitations, no barriers of race, religion, politics, or culture.</p>
+      <p>“BODYBUILDING IS IMPORTANT FOR NATION BUILDING”</p>
+      <p>- Ben Weider, Founder of the IFBB</p>
+    </div>
+
+    <div class="card">
+      <h2 class="section-title">VOTING PROCEDURES</h2>
+      <h3>2026 IFBB MR UNIVERSE</h3>
+
+      <p><span class="highlight">Prizes:</span></p>
+      <ul>
+        <li>1st Runner-Up: $800,000 + endorsement</li>
+        <li>2nd Runner-Up: $500,000 + endorsement</li>
+        <li>3rd Runner-Up: $150,000 + endorsement</li>
+      </ul>
+
+      <p><span class="highlight">Competition Format:</span></p>
+      <ul>
+        <li>5 group stages before final winner is announced</li>
+        <li>Lowest voted contestant is eliminated each stage</li>
+        <li>Minimum 10,000 votes required to remain in competition</li>
+        <li>Voting period runs for 2 months per stage</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2 class="section-title">VOTING SYSTEM</h2>
+      <div class="pricing">
+        <p>300 votes = $300</p>
+        <p>400 votes = $400</p>
+        <p>500 votes = $500</p>
+        <p>600 votes = $600</p>
+        <p>700 votes = $700</p>
+      </div>
+    </div>
+
+    <!-- NEW PAYMENT SECTION -->
+    <div class="card">
+      <h2 class="section-title">BUY VOTES</h2>
+      <p>Select a voting package below to support your favorite contestant:</p>
+
+      <button class="btn" onclick="buyVotes(300)">Buy 300 Votes</button>
+      <button class="btn" onclick="buyVotes(400)">Buy 400 Votes</button>
+      <button class="btn" onclick="buyVotes(500)">Buy 500 Votes</button>
+      <button class="btn" onclick="buyVotes(600)">Buy 600 Votes</button>
+      <button class="btn" onclick="buyVotes(700)">Buy 700 Votes</button>
+
+      <div class="payment-box" id="paymentBox" style="display:none;">
+        <h3>Payment Processing</h3>
+        <p id="paymentText"></p>
+        <p class="note">(Demo UI - connect Stripe/PayPal for real payments)</p>
+      </div>
+    </div>
+
+    <div class="card contact">
+      <p><strong>Contact:</strong> infoifbb1@gmail.com</p>
+    </div>
+
+  </div>
+
+  <script>
+    function buyVotes(amount) {
+      const box = document.getElementById('paymentBox');
+      const text = document.getElementById('paymentText');
+      box.style.display = 'block';
+      text.innerText = "You selected " + amount + " votes. Proceed to payment setup.";
+    }
+  </script>
+
+</body>
+</html>
