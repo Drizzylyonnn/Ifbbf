@@ -92,3 +92,24 @@ button:hover {
     padding: 12px;
   }
 }
+
+/* Status message */
+#form-status {
+  margin-top: 15px;
+  font-size: 14px;
+  display: none;
+}
+
+#form-status.success {
+  color: green;
+}
+
+#form-status.error {
+  color: red;
+}
+
+/* Loading button */
+button.loading {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
