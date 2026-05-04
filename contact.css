@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #0f172a;
+  color: #fff;
+}
+
+/* LAYOUT */
+.contact {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 1100px;
+  width: 100%;
+  display: flex;
+  gap: 40px;
+}
+
+/* LEFT SIDE */
+.left {
+  flex: 1;
+}
+
+.left h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.small-text {
+  margin-top: 20px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* RIGHT SIDE */
+.right {
+  flex: 1;
+  background: #1e293b;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+/* FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  background: #0f172a;
+  color: #fff;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid #3b82f6;
+}
+
+/* CHECKBOX */
+.checkbox {
+  font-size: 14px;
+}
+
+/* BUTTON */
+button {
+  padding: 12px;
+  border: none;
+  background: #3b82f6;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #2563eb;
+}
+
+/* SUCCESS TEXT */
+#form-status {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}
