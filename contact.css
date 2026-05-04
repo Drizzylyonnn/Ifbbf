@@ -2,26 +2,27 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
 body {
-  background: #0f172a;
-  color: #fff;
+  background: #f8fafc;
+  color: #1e293b;
 }
 
-/* LAYOUT */
+/* SECTION */
 .contact {
-  padding: 60px 20px;
+  padding: 80px 20px;
   display: flex;
   justify-content: center;
 }
 
+/* CONTAINER */
 .container {
   max-width: 1100px;
   width: 100%;
   display: flex;
-  gap: 40px;
+  gap: 50px;
 }
 
 /* LEFT SIDE */
@@ -30,22 +31,38 @@ body {
 }
 
 .left h2 {
-  font-size: 32px;
-  margin-bottom: 10px;
+  font-size: 36px;
+  margin-bottom: 15px;
+  color: #0f172a;
 }
 
+.left p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* INFO BOX */
+.info-box {
+  background: #e0f2fe;
+  padding: 15px;
+  border-left: 4px solid #0284c7;
+  border-radius: 6px;
+  margin: 20px 0;
+}
+
+/* SMALL TEXT */
 .small-text {
-  margin-top: 20px;
-  font-size: 14px;
-  opacity: 0.7;
+  font-size: 13px;
+  color: #64748b;
 }
 
-/* RIGHT SIDE */
+/* RIGHT SIDE (FORM CARD) */
 .right {
   flex: 1;
-  background: #1e293b;
-  padding: 25px;
+  background: white;
+  padding: 30px;
   border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
 /* FORM */
@@ -55,49 +72,58 @@ form {
   gap: 15px;
 }
 
+/* INPUTS */
 input,
 textarea {
   width: 100%;
   padding: 12px;
   border-radius: 6px;
-  border: none;
-  background: #0f172a;
-  color: #fff;
+  border: 1px solid #cbd5e1;
+  font-size: 14px;
 }
 
 input:focus,
 textarea:focus {
-  outline: 2px solid #3b82f6;
+  outline: none;
+  border-color: #0284c7;
+  box-shadow: 0 0 0 2px rgba(2,132,199,0.1);
 }
 
 /* CHECKBOX */
 .checkbox {
   font-size: 14px;
+  color: #334155;
 }
 
 /* BUTTON */
 button {
-  padding: 12px;
+  padding: 14px;
   border: none;
-  background: #3b82f6;
+  background: #0284c7;
   color: white;
   border-radius: 6px;
+  font-weight: 600;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 button:hover {
-  background: #2563eb;
+  background: #0369a1;
 }
 
-/* SUCCESS TEXT */
+/* STATUS */
 #form-status {
-  margin-top: 10px;
   font-size: 14px;
+  margin-top: 10px;
 }
 
 /* MOBILE */
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
+  }
+
+  .left h2 {
+    font-size: 28px;
   }
 }
